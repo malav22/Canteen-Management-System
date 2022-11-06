@@ -13,6 +13,29 @@
 								while($row=mysqli_fetch_assoc($runQuery4)){
 								$sum=$row['sum(p_price)'];
 		}
+		
+		if($_GET['product_id']==-1){
+			$query = "TRUNCATE table orders";
+			$run_t = mysqli_query($con, $query);
+			$_GET['product_id']==0;
+			header("Refresh:0; url=full_menu.php");
+		}
+		if($_GET['product_id']>0){
+			
+			header("Refresh:0; url=full_menu.php");
+		}
+		if($_GET['product_id']==-2){
+	echo "<script>alert('Insufficient balance to place the order')</script>";
+			// header("Refresh:0; url=full_menu.php");
+		}
+		if($_GET['product_id']==-3){
+			?>
+			<script type="text/javascript">
+				alert('Order placed successfully');
+				window.location = "index.php";
+				</script>
+			<?php
+		}
 	?>
 	<title>Full Menu</title>
 	<meta charset="utf-8">
@@ -148,7 +171,7 @@
 			<?php
 				if(isset($_GET['product_id'])){
 
-
+						global $id;
 						$id=$_GET['product_id'];
 
 						$query="SELECT *FROM products WHERE product_id=".$id;
@@ -161,6 +184,7 @@
 							$runQuery1=mysqli_query($con,$query1);
 							
 						}
+						// header("location: full_menu.php");
 				}
 
 				if(isset($_GET['call'])){
@@ -169,7 +193,7 @@
 						while($row=mysqli_fetch_assoc($runQuery3)){
 							$sum=$row['sum(p_price)'];
 
-							header("location: full_menu.php");
+
 						}
 
 
@@ -185,9 +209,14 @@
 			      ?></p>
 			  	  </span>
 				<form method="POST" action="formpro.php">
-					<input type="submit" class="btn btn-success" value="FINALIZE ORDER" name="sub">
+					<input type="submit" class="btn btn-success" value="Place Order" name="sub">
 					<input type="hidden" name="hid" value= <?php echo $sum;?> >
-				</form></center>
+				</form>
+				<!-- <form method="post"> -->
+				<a href="full_menu.php?product_id=-1"><input type="submit" name="button1"
+                class="button" value="Clear Cart" /></a>
+    <!-- </form> -->
+</center>
 
 
 

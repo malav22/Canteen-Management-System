@@ -28,12 +28,14 @@ if ($amount >= $sum) {
 
 	$query = "TRUNCATE table orders";
 	$run_t = mysqli_query($con, $query);
+	header("Location: full_menu.php?product_id=-3");
 	echo "<script>alert('Placed')</script>";
 	echo "<script>window.open('index.php');</script>";
 	echo "<script>close();</script>";
 } else {
-	echo "<script>alert('Insufficient balance')</script>";
-	// header("Location: full_menu.php");
-	echo "<script>window.open('full_menu.php');</script>";
+	// echo "<script>alert('Insufficient balance')</script>";
+	// $sum = 0;
+	header("Location: full_menu.php?product_id=-2");
+	// echo "<script>window.open('full_menu.php');</script>";
 	echo "<script>close();</script>";
 }
