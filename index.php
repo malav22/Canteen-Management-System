@@ -7,8 +7,10 @@ session_start();
 if(!isset($_SESSION['customer_email'])){
 header("location: customer_login.php");
 }
+@include 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic';
 
 ?>
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -115,6 +117,222 @@ h1 em {
     /* background-color: #f3f3f3; */
 }
 
+
+body {
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+
+figure {
+	position:relative;
+	width:100%;
+	min-height:160px;
+	display:block;
+	float:left;
+	overflow:hidden;
+	margin:10px 0;
+	box-shadow:inset 0px 2px 3px rgba(0,0,0,.2);
+	-webkit-transition: all .15s ease-in-out;
+}
+.ocean {
+	background-color:#fff;
+	/* background-image: url("https://i.imgur.com/KIW5eEx.jpg"); */
+	/* background-size:cover; */
+	background-position:center center;
+  height:50vh;
+  width:30vw;
+}
+figcaption {
+	display:block;
+	float:left;
+	position:absolute;
+	top:0;
+	left:0;
+	color:#FFF;
+	font-size:15px;
+	line-height:20px;
+	font-weight:bold;
+	text-transform:uppercase;
+	background-color:rgba(0,0,0,.7);
+	width:50%;
+	height:100%;
+	margin:0 0 0 -20px;;
+	padding:20px;
+	padding-left:40px;
+	-webkit-transform: skew(-10deg);
+       -moz-transform: skew(-10deg);
+         -o-transform: skew(-10deg);
+	-webkit-transition: all .15s ease-in-out;
+}
+figcaption a, figcaption a:hover {
+	color:#FFF;
+	text-decoration:none;
+}
+figcaption strong {
+	display:block;
+	word-wrap: normal;
+	-webkit-transform: skew(10deg);
+       -moz-transform: skew(10deg);
+         -o-transform: skew(10deg);
+}
+figcaption strong:before {
+	content:" ";
+	border-top:solid 3px rgba(211,29,26,1);
+	width:140%;
+	display:block;
+	clear:both;
+	margin-bottom:20px;
+	-webkit-transition: all .15s ease-in-out;
+}
+
+/* HOVERS */
+figure:hover figcaption {
+	background-color:rgba(211,29,26,.9);
+	-webkit-transition: all .15s ease-in-out;
+}
+figure:hover figcaption strong:before {
+	width:200%;
+	border-color:#FFF;
+	-webkit-transition: all .15s ease-in-out;
+}
+
+
+* {box-sizing: border-box;}
+.mySlides {display: none;height:60vh;}
+img {vertical-align: middle;height:60vh;}
+
+/* Slideshow container */
+.slideshow-container {
+  width:40%;
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #000;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.8s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.img-slider {
+    position: relative;
+    width: 100vw;
+    height: 400px;
+}
+.img-slider .slider-container {
+    position: absolute;
+    width: 300%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    animation: slider 20s infinite;
+}
+.img-slider .slider-container .slide {
+    position: relative;
+    width: 33.33333333%;
+    height: 100%;
+    float: left;
+    overflow: hidden
+}
+.img-slider .slider-container .slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+@keyframes slider {
+    0%, 25%, 100%{left: 0}
+    
+    30%, 55%{left: -100%}
+    
+    60%, 85%{left: -200%}
+}
+.img-slider2 {
+    position: relative;
+    width: 100vw;
+    height: 400px;
+}
+.img-slider2 .slider-container2 {
+    position: absolute;
+    width: 300%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    animation: slider 15s infinite;
+}
+.img-slider2 .slider-container2 .slide2 {
+    position: relative;
+    width: 33.33333333%;
+    height: 100%;
+    float: left;
+    overflow: hidden
+}
+.img-slider2 .slider-container2 .slide2 img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+
+}
+@keyframes slider2 {
+    0%, 25%, 100%{left: 0}
+    
+    30%, 55%{left: -100%}
+    
+    60%, 85%{left: -200%}
+}
         </style>
   </head>
 
@@ -142,185 +360,236 @@ h1 em {
         </div>
       </div>
 </div>
-        
-        
-  <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel"  style="height:90vh;">
-    
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-    </ol>
-
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="images/img4.jpg" alt="college" style="width:100%;height: 100vh">
-      </div>
-
-      <div class="item">
-        <img src="images/maincan.jpg" alt="canteen" style="width:100%; height: 100vh">
-      </div>
-    </div>
-
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev" >
-      <span class="glyphicon glyphicon-chevron-left" ></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only" >Next</span>
-    </a>
-  </div> -->
+      
   <div class="two alt-two">
   <h1>Main Canteen
     <span>IIT(ISM) Dhanbad</span>
   </h1>
 </div>
   <div class="parallax"></div>
-
-      <div class="navbar navbar-inverse navbar-static-top " role="navigation" style="height:20vh;background-color:#fff;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;padding:15px;border-radius:20px;">
-        <a style="text-decoration:none;" href="full_menu.php"><h3 style="font-size: 50px;
+  <div style="min-height:100vh;">
+    <div class="navbar navbar-inverse navbar-static-top " role="navigation" style="height:20vh;background-color:#fff;">
+      <a style="text-decoration:none;" href="full_menu.php"><h3 style="font-size: 50px;
           text-align:center;
   font-weight: 600;
   background-image: linear-gradient(to right, #553c9a, #ee4b2b);
   color: transparent;
   background-clip: text;
-  -webkit-background-clip: text;">Specials</h3></a>
+  -webkit-background-clip: text;">Today's Special</h3></a>
         </div>
-        <div class="row" style="height:80vh;width:80vw;">
-          <div class="col-lg-4" align="center">
-            <img class="img-circle" src="images/masaladosa.png" width="300px" height="300px">
-            <br><br><h2>MASALA DOSA
-            <p><a class="btn btn-primary" href="full_menu.php" role="button"> &#8377; 30 ADD TO CART &raquo;</a></p></h2>
-          </div><!-- /.col-lg-4 --> 
-          <div class="col-lg-4" align="center">
-            <img class="img-circle" src="images/sandwich.png"  width="300px" height="300px">
-            <br><br><br><br><br><br><h2>SANDWICH</h2>
-            <p><a class="btn btn-primary" href="full_menu.php" role="button"> &#8377;30 ADD TO CART &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4" align="center">
-            <img class="img-circle" src="images/oreo_3.png" width="300px" height="300px">
-            <h2>MILKSHAKES</h2>
-            <p><a class="btn btn-primary" href="full_menu.php" role="button"> &#8377;30 ADD TO CART &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
-  
-  
-  
-  
-  
-  
-  
-  
-<!--Breakfast Carousel-->
-  <div class="navbar navbar-inverse navbar-static-top " role="navigation">
-    <a href="full_menu.php"><h2 class="itemsTitle" style=" color: white" align="center">BREAKFAST</h2></a>
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-sm-6">
+              <figure class="ocean" style="background-image: url('images/masaladosa.png');">
+                <figcaption>
+                  <a href="full_menu.php">
+                    <strong>Masala Dosa</strong>
+                  </a>	
+                </figcaption>
+              </figure>
+		</div>
+		<div class="col-md-4 col-sm-6">
+      <figure class="ocean" style="background-image: url('images/sandwich.png');">
+				<figcaption>
+          <a href="full_menu.php">
+            <strong>Sandwich</strong>
+					</a>	
+				</figcaption>
+			</figure>
+		</div>
+    <div class="col-md-4 col-sm-6">
+      <figure class="ocean" style="background-image: url('images/oreo_3.png');">
+				<figcaption>
+          <a href="full_menu.php">
+					<strong>Oreo Shake</strong>
+        </a>	
+      </figcaption>
+    </figure>
   </div>
-      <div id="myCarousel1" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <div class="carousel-inner">
-        <div class="item active">
-          <div class="row">
-            <div class="col-lg-4" align="center">
-              <img src="images/idli.png" alt="freshs items" width="500" height="350">
-              <h4>IDLI</h4>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4" align="center">
-              <img src="images/poha.png" alt="Generic placeholder image" width="500" height="350">
-              <br><br><h4>POHA</h4>
-                          </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4" align="center">
-              <img src="images/dosa.png" alt="Generic placeholder image" width="500" height="350">
-              <h4>DOSA</h4>
-                          </div><!-- /.col-lg-4 -->
-          </div><!-- /.row -->
-        </div>
-        <div class="item">
-          <div class="row">
-            <div class="col-lg-4" align="center">
-              <img src="images/vada_pav.png" alt="Generic placeholder image" width="500" height="350">
-              <h4>VADA PAV</h4>
-                          </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4" align="center">
-              <img src="images/upma.png" alt="Generic placeholder image" width="500" height="350">
-              <h4>UPMA</h4>
-             
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4" align="center">
-              <img src="images/medu_vada.png" alt="Generic placeholder image" width="500" height="350">
-              <h4>MEDU VADA</h4>
-            </div><!-- /.col-lg-4 -->
-          </div><!-- /.row -->
-        </div>
-      </div>
-      <!-- RIGHT LEFT CONTROLS-->
-      <a class="left carousel-control" href="#myCarousel1" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel1" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-        <span class="sr-only">Next</span>
-      </a>
+  <div class="col-md-4 col-sm-6">
+      <figure class="ocean" style="background-image: url('images/brownie.jpg');">
+				<figcaption>
+          <a href="full_menu.php">
+					<strong>Brownie with Icecream</strong>
+        </a>	
+      </figcaption>
+    </figure>
+  </div>
+</div>
+</div>
+</div>
+  
 
+  <hr style="height:2px;width: 75vw;color:black;background-color:#080808;margin:auto;">
+  
+  <div style="min-height:100vh">
+  <div class="navbar navbar-inverse navbar-static-top " role="navigation" style="height:20vh;background-color:#fff;">
+      <a style="text-decoration:none;" href="full_menu.php"><h3 style="font-size: 50px;
+          text-align:center;
+  font-weight: 600;
+  background-image: linear-gradient(to right, #553c9a, #ee4b2b);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;">Breakfast</h3></a>
+        </div>
+<!--Breakfast Carousel-->
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 6</div>
+  <img src="images/idli.png" style="width:100%;">
+  <div class="text">Idli</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 6</div>
+  <img src="images/poha.png" style="width:100%">
+  <div class="text">Poha</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 6</div>
+  <img src="images/dosa.png" style="width:100%">
+  <div class="text">Dosa</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">4 / 6</div>
+  <img src="images/vada_pav1.png" style="width:100%">
+  <div class="text">Vadapav</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">5 / 6</div>
+  <img src="images/upma.png" style="width:100%">
+  <div class="text">Upma</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">6 / 6</div>
+  <img src="images/medu_vada.png" style="width:100%">
+  <div class="text">Medu Vada</div>
+</div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+
+
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+</script>
+
+
+  </div>
+  <p align="center"><a class="btn btn-success btn-lg"  href="full_menu.php" role="button">&nbsp;&nbsp;&nbsp; View FULL MENU &nbsp;&nbsp;&nbsp;</a></p>
+
+
+  <hr style="height:2px;width: 75vw;color:black;background-color:#080808;margin:auto;">
+  
+  <div style="min-height:100vh">
+  <div class="navbar navbar-inverse navbar-static-top " role="navigation" style="height:20vh;background-color:#fff;">
+      <a style="text-decoration:none;" href="full_menu.php"><h3 style="font-size: 50px;
+          text-align:center;
+  font-weight: 600;
+  background-image: linear-gradient(to right, #553c9a, #ee4b2b);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;">Lunch</h3></a>
+        </div>
+
+<!--Lunch Carousel-->
+
+
+<br>
+
+<Section class="img-slider" style="height:50vh;margin:auto;">
+  <div class="slider-container">
+    
+    <div class="slide">
+      <img src="images/thali.png" style="width:50vw;height:50vh;margin:auto;">
+    </div>
+    
+    <div class="slide">
+      <img src="images/pav.png" style="width:50vw;height:50vh;margin:auto;">
     </div>
 
+    <div class="slide">
+      <img src="images/lassi.png" style="width:50vw;height:50vh;margin:auto;">
+    </div>
+    
+    <!-- <div class="slide">
+      <img src="images/pav_bhaji.png">
+    </div>
+    <div class="slide">
+      <img src="images/noodle.png">
+    </div>
+    <div class="slide">
+      <img src="images/burger.png">
+    </div> -->
 
-      <p align="center"><a class="btn btn-success btn-lg"  href="full_menu.php" role="button">&nbsp;&nbsp;&nbsp; View FULL MENU &nbsp;&nbsp;&nbsp;</a></p>
-<!--Lunch Carousel-->
-  <div class="navbar navbar-inverse navbar-static-top " role="navigation">
-    <a href="full_menu.php"><h2 class="itemsTitle" style="color: white" align="center">LUNCH</h2></a>
   </div>
-      <div id="myCarousel2" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <div class="carousel-inner">
-        <div class="item active" align="center">
-          <div class="row">
-            <div class="col-lg-4">
-              <img src="images/rice.png" alt="Generic placeholder image"  width="500" height="350">
-              <h4>FRIED RICE</h4>
-                          </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-              <img src="images/thali.png" alt="Generic placeholder image"  width="500" height="350">
-              <h4>THALI</h4>
-                          </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-              <img src="images/noodle.png" width="500" height="350">
-              <h4>NOODLES</h4>
-             
-            </div><!-- /.col-lg-4 -->
-          </div><!-- /.row -->
-        </div>
-        <div class="item" align="center">
-          <div class="row">
-            <div class="col-lg-4">
-              <img src="images/lassi.png" alt="Generic placeholder image"  width="500" height="350">
-              <h4>LASSI</h4>
-             
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-              <img src="images/pav.png" alt="Generic placeholder image"  width="500" height="350">
-              <h4>MISAL PAV</h4>
-                          </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-              <img src="images/pav_bhaji.png" alt="Generic placeholder image" width="500" height="350">
-              <h4>PAV BHAJI</h4>
-             
-            </div><!-- /.col-lg-4 -->
-          </div>
-        </div>
-      </div>
-        <!-- RIGHT LEFT CONTROLS-->
-          <a class="left carousel-control" href="#myCarousel2" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel2" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-          </a>
+</Section>
+<br>
+<!-- <hr style="height:2px;width: 75vw;color:black;background-color:#080808;margin:auto;"> -->
+<br>
+<Section class="img-slider2" style="height:50vh;margin:auto;">
+  <div class="slider-container2">
+    
+    <!-- <div class="slide">
+      <img src="images/thali.png" style="width:50vw;height:50vh;margin:auto;">
+    </div>
+    
+    <div class="slide">
+      <img src="images/pav.png" style="width:50vw;height:50vh;margin:auto;">
+    </div>
+
+    <div class="slide">
+      <img src="images/lassi.png" style="width:50vw;height:50vh;margin:auto;">
+    </div> -->
+    
+    <div class="slide2">
+      <img src="images/pav_bhaji.png"style="width:50vw;height:50vh;margin:auto;">
+    </div>
+    <div class="slide2">
+      <img src="images/noodle.png"style="width:50vw;height:50vh;margin:auto;">
+    </div>
+    <div class="slide2">
+      <img src="images/burger.png"style="width:50vw;height:50vh;margin:auto;">
+    </div>
+
+  </div>
+</Section>
+<br>
+
+</div>
 
 
-      </div>
+
 
 
 
