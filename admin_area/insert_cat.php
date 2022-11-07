@@ -1,7 +1,7 @@
 
 <form action="" method="post" style="padding:80px;">
 
-<b>Insert New Category:</b>
+<b>Add New Category:</b>
 <input type="text" name="new_cat" required/> 
 <input type="submit" name="add_cat" value="Add Category" /> 
 
@@ -20,7 +20,7 @@ include("includes/db.php");
 	
 	if($run_cat){
 	
-	echo "<script>alert('New Category has been inserted!')</script>";
+	echo "<script>alert('New Category has been added!')</script>";
 	echo "<script>window.open('index.php?view_cats','_self')</script>";
 	}
 	}

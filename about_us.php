@@ -12,49 +12,88 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
     <style type="text/css">
-       /* body{
-       background-image: url("images/bg3.jpg");
-       background-size: 100%;
-       background-repeat: no-repeat;
+      /*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+.bg-cover {
+    background-size: cover !important;
+}
 
-    } */
+
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSES
+* ==========================================
+*
+*/
+
+body {
+    min-height: 100vh;
+}
     
   </style>
 </head>
 <body>
 
-<div class="navbar-wrapper">
-      <div class="navbar  navbar-static-top " role="navigation">
-        <a href="http://www.iitism.ac.in/"><img style="width: 120px; height: 100px;margin-left:10px;" src="images/ism.png" align="left"></a>
-        <img src="images/canteen3.png" align="right" width="170px" height="100px" style="padding-right: 10px">
-        <header>
-          <h1 style="font-size: 50px;
-          text-align:center;
-  font-weight: 600;
-  background-image: linear-gradient(to right, #553c9a, #ee4b2b);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;">Canteen Management System</h1>
-        </header> <br><br>
-        <div class="navbar navbar-inverse nomar" >
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse ">
-            <span class="sr-only">Toggle navigation</span>
-          </button>
-              
-          <div class="navbar-collapse collapse nomar">
-            <ul class="nav navbar-nav">
-              <li><a href="index.php">Home</a></li>
-              <li class="active"><a href="about_us.php">About Us</a></li>
-              <li><a href="full_menu.php">Menu</a></li>
-              <li><a href="admin_area">Admin Dashboard</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+<!-- Bootstrap Static Header -->
+<div style="background: url(images/maincan.jpg)" class="jumbotron bg-cover text-white" style="height:100vh;">
+    <div class="container py-5 text-center">
+        <h1 class="display-4 font-weight-bold">Canteen Management System</h1>
+        <p class="font-italic mb-0">IIT(ISM) Dhanbad</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <p class="font-italic">
+            <a href="customer_login.php" class="text-white">
+                <u>Login</u>
+            </a>
+        </p>
+        <a href="index.php" role="button" class="btn btn-primary px-5">Visit Website</a>
     </div>
+</div>
 
-  <h1 align="center" style="color: black">About Us</h1>
+<!-- For Demo Purpose -->
+<div class="container py-5">
+    <h2 class="h3 font-weight-bold">About Us</h2>
+    <div class="row">
+        <div class="col-lg-10 mb-4">
+            <p class="font-italic text-muted">No more long lines! Wait no more. Order Food on a Tap!
+</p>
+            <p class="font-italic text-muted">We would like to serve the university cafeteria with love. Visit our website to see the wide range of options we have available. Our website is designed so that you can sit at your table, order your food, and later order online and enjoy it hassle-free.
+</p>
+        </div>
+        <div class="col-lg-8">
+            <p class="font-italic text-muted">The website was created from our first-hand experience as troubled students in college cafeterias.
+</p>
+        </div>
+        <div class="col-lg-8">
+            <p class="font-italic text-muted">The website brings canteen food to your table in the same way Zomato delivers food from your hotel to your home.
 
+</p>
+        </div>
+        <div class="col-lg-8">
+            <p class="font-italic text-muted">We hope you find this website helpful.
+</p>
+        </div>
+    </div>
+</div>
   
 
 

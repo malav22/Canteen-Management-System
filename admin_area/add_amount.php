@@ -1,7 +1,11 @@
 <?php 
 
 include("includes/db.php");
+// if(!isset($_GET['add_amount'])){
+	
+// 	header("location: index.php?add_amount");
 
+// }
 ?>
 	<head>
 		<title>Add amount</title> 
@@ -17,14 +21,14 @@ include("includes/db.php");
 		<table align="center" width="795" border="2" style="color:white">
 			
 			<tr align="center">
-				<td colspan="7"><h2>ADD AMOUNT </h2></td>
+				<td colspan="7"><h2>Add Amount </h2></td>
 			</tr>
 			
 			<tr>
 				<td align="right"><b>Choose Customer:</b></td>
 				<td>
 				<select name="c_prn" >
-					<option>Customer PRN</option>
+					<option>Customer Username</option>
 					<?php 
 		$get_cats = "SELECT * from customers";
 	
@@ -62,7 +66,7 @@ include("includes/db.php");
 			
 			
 			<tr align="center">
-				<td colspan="7"><input type="submit" name="add" value="ADD AMOUNT NOW"/></td>
+				<td colspan="7"><input type="submit" name="add" value="Add Amount"/></td>
 			</tr>
 		
 		</table>
@@ -92,9 +96,11 @@ include("includes/db.php");
 		 
 		 if($insert_pro){
 		 
-		 echo "<script>alert('Amount has been updated')</script>";
-		 echo "<script>window.open('index.php?add_amount')</script>";
-		 echo"<script>close();</script>";
+			echo ("<script LANGUAGE='JavaScript'>
+			window.alert('Succesfully Updated');
+			window.location.href='index.php?add_amount';
+			</script>");
+		//  echo"<script>close();</script>";
 		 
 		 }
 	}

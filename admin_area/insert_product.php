@@ -7,7 +7,7 @@ include("includes/db.php");
 ?>
 <html>
 	<head>
-		<title>Inserting Product</title> 
+		<title>Add Product</title> 
 		
 <script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
 <script>
@@ -23,11 +23,11 @@ include("includes/db.php");
 		<table align="center" width="795" border="2" style="color:white">
 			
 			<tr align="center">
-				<td colspan="7"><h2>Insert New Product</h2></td>
+				<td colspan="7"><h2>Add New Product</h2></td>
 			</tr>
 			
 			<tr>
-				<td align="right"><b>Product Title:</b></td>
+				<td align="right"><b>Product Name:</b></td>
 				<td><input type="text" name="product_title" size="60" required/></td>
 			</tr>
 			
@@ -77,7 +77,7 @@ include("includes/db.php");
 			
 			
 			<tr align="center">
-				<td colspan="7"><input type="submit" name="insert_post" value="Insert Product Now"/></td>
+				<td colspan="7"><input type="submit" name="insert_post" value="Add New Product"/></td>
 			</tr>
 		
 		</table>
@@ -105,9 +105,10 @@ include("includes/db.php");
 		 
 		 if($insert_pro){
 		 
-		 echo "<script>alert('Product Has been inserted!')</script>";
-		 echo "<script>window.open('index.php?insert_product')</script>";
-		 echo"<script>close();</script>";
+			echo ("<script LANGUAGE='JavaScript'>
+			window.alert('Product added successfully');
+			window.location.href='index.php?view_products';
+			</script>");
 		 
 		 }
 	}

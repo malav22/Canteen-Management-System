@@ -18,31 +18,30 @@ else {
 	<link rel="stylesheet" href="styles/style.css" media="all" /> 
 	</head>
 
-
 <body> 
 
 	
 	
 	
 		<div id="header">
-			<p align="center" style="font-size: 150;color: white;">ADMINISTRATOR</p>
+			<p align="center" style="font-size: 50;color: white;">Admin Panel</p>
 		</div>
 		
-		<div id="right">
+		<div id="left">
 		<h2 style="text-align:center;color: white"><strong>Manage Content</strong></h2>
 			
-			<a href="index.php?insert_product">Insert New Product</a>
+			<a href="index.php?insert_product">Add New Product</a>
 			<a href="index.php?view_products">View All Products</a>
-			<a href="index.php?insert_cat">Insert New Category</a>
+			<a href="index.php?insert_cat">Add New Product Category</a>
 			<a href="index.php?view_cats">View All Categories</a>
-			<a href="index.php?view_orders">View Orders</a>
-			<strong><a style="color: red;" href="index.php?add_amount">Add amount</a></strong>
+			<a href="index.php?view_orders">View All Orders</a>
+			<strong><a style="color: red;" href="index.php?add_amount">Add Amount</a></strong>
 			<br>
 			<a style="color: grey" href="logout.php">Admin Logout</a>
 		
 		</div>
 		
-		<div id="left">
+		<div id="right">
 		<?php 
 		if(isset($_GET['insert_product'])){
 		
