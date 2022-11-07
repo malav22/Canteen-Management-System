@@ -6,7 +6,7 @@ if(!isset($_SESSION['user_email'])){
 else {
 
 ?>
-<table width="1300" align="center" style="color: white" border="10px" bgcolor="black"> 
+<table width="100%" align="center" style="color: white;border-radius:20px;margin-top:10px;margin-left:10px;" bgcolor="#6699ff"> 
 
 	
 	<tr align="center">
@@ -14,11 +14,11 @@ else {
 	</tr>
 	
 	<tr align="center" bgcolor="white" style="color: black">
-		<th>S.N</th>
-		<th>Title</th>
-		<th>Price</th>
-		<th>Edit</th>
-		<th>Delete</th>
+		<th style="border-radius:10px;">S.N</th>
+		<th style="border-radius:10px;">Title</th>
+		<th style="border-radius:10px;">Price</th>
+		<th style="border-radius:10px;">Edit</th>
+		<th style="border-radius:10px;">Delete</th>
 	</tr>
 	<?php 
 	include("includes/db.php");
@@ -41,8 +41,8 @@ else {
 		<td><?php echo $i;?></td>
 		<td><?php echo $pro_title;?></td>
 		<td><?php echo $pro_price;?></td>
-		<td><a href="index.php?edit_pro=<?php echo $pro_id; ?>">Edit</td></a>
-		<td><a href="delete_pro.php?delete_pro=<?php echo $pro_id;?>">Delete</a></td>
+		<td><a style="text-decoration:none;color:white;" href="index.php?edit_pro=<?php echo $pro_id; ?>">&#x270E;</td></a>
+		<td><a style="text-decoration:none;color:white;" href="delete_pro.php?delete_pro=<?php echo $pro_id;?>">🗑</a></td>
 	
 	</tr>
 	<?php } ?>

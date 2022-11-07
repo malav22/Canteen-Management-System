@@ -1,4 +1,4 @@
-<table width="1300" align="center" bgcolor="black" style="color: white"> 
+<table width="100%" align="center" style="color: white;border-radius:20px;margin-top:10px;margin-left:10px;" bgcolor="#6699ff"> 
 
 	
 	<tr align="center">
@@ -6,10 +6,10 @@
 	</tr>
 	
 	<tr align="center" bgcolor="white" style="color: black">
-		<th>S.N</th>
-		<th>Food Item</th>
-		<th>Price</th>
-		<th>PRN</th>
+		<th style="border-radius:10px;">S.N</th>
+		<th style="border-radius:10px;">Food Item</th>
+		<th style="border-radius:10px;">Price</th>
+		<th style="border-radius:10px;">PRN</th>
 	</tr>
 	<?php 
 	include("includes/db.php");
