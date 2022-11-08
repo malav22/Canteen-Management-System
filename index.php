@@ -381,7 +381,7 @@ img {vertical-align: middle;height:60vh;}
         <div class="container">
           <div class="row">
             <div class="col-md-4 col-sm-6">
-              <figure class="ocean" style="background-image: url('images/masaladosa.png');">
+              <figure class="ocean" style="background-image: url('images/masaladosa.png');background-size:cover;">
                 <figcaption>
                   <a href="full_menu.php">
                     <strong>Masala Dosa</strong>
@@ -390,7 +390,7 @@ img {vertical-align: middle;height:60vh;}
               </figure>
 		</div>
 		<div class="col-md-4 col-sm-6">
-      <figure class="ocean" style="background-image: url('images/sandwich.png');">
+      <figure class="ocean" style="background-image: url('images/sandwich.png');background-size:cover;">
 				<figcaption>
           <a href="full_menu.php">
             <strong>Sandwich</strong>
@@ -399,7 +399,7 @@ img {vertical-align: middle;height:60vh;}
 			</figure>
 		</div>
     <div class="col-md-4 col-sm-6">
-      <figure class="ocean" style="background-image: url('images/oreo_3.png');">
+      <figure class="ocean" style="background-image: url('images/oreo_3.png');background-size:cover;">
 				<figcaption>
           <a href="full_menu.php">
 					<strong>Oreo Shake</strong>
@@ -408,7 +408,7 @@ img {vertical-align: middle;height:60vh;}
     </figure>
   </div>
   <div class="col-md-4 col-sm-6">
-      <figure class="ocean" style="background-image: url('images/brownie.jpg');">
+      <figure class="ocean" style="background-image: url('images/brownie.jpg');background-size:cover;">
 				<figcaption>
           <a href="full_menu.php">
 					<strong>Brownie with Icecream</strong>
